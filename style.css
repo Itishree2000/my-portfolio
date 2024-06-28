@@ -1,4 +1,4 @@
-* {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,9 +8,14 @@ body {
   background-color: rgb(8, 27, 41);
   color: white;
 }
-/* #nav-page{
+/* Webkit (Safari, Chrome) */
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+#nav-page{
      background-color: rgb(8, 27, 41);
-} */
+} 
 header {
   position: fixed;
   width: 100%;
@@ -658,3 +663,178 @@ gap: 1.5rem;
 }
 
 
+  
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    header {
+      padding: 1rem 2rem;
+    }
+    
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 300px;
+      background-color: rgb(8, 27, 41);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: right 0.3s ease;
+    }
+    
+    .navbar a {
+      font-size: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    
+    .burger-menu {
+      display: block;
+      cursor: pointer;
+    }
+    
+    .burger-menu.active + .navbar {
+      right: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home {
+      padding: 3rem 2rem;
+      flex-direction: column;
+    }
+    
+    .home-content {
+      text-align: center;
+    }
+    
+    .home-content h1 {
+      font-size: 1.75rem;
+    }
+    
+    .home-content h3, .home-content p, .btn-box {
+      font-size: 1rem;
+    }
+    
+    .home img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .about {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+    
+    .about-img img {
+      margin: 1rem auto;
+    }
+    
+    .about-text h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    
+    .about-text p {
+      font-size: 0.875rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container, .container1 {
+      width: 100%;
+      padding: 2rem;
+    }
+    
+    .skill, .project, .contact-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .sub-title {
+      font-size: 2rem;
+    }
+    
+    .project, .contact-item {
+      max-width: 100%;
+    }
+    
+    .navbar {
+      width: 100%;
+      height: auto;
+      right: 0;
+      background-color: rgb(8, 27, 41);
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+    
+    .navbar a {
+      margin: 0 0.5rem;
+      font-size: 1rem;
+    }
+    
+    .burger-menu {
+      display: none;
+    }
+    
+    /* Additional styles for project section */
+    .main-projects {
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .project {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    
+    .project img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    
+    .project h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .project p {
+      font-size: 0.875rem;
+    }
+    
+    /* Additional styles for contact section */
+    #contact {
+      padding: 3rem 2rem;
+    }
+    
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .contact-item {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+    
+    .contact-item img {
+      width: 60px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-item p {
+      font-size: 0.875rem;
+    }
+  }
+  
+  
